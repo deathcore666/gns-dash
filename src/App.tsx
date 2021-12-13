@@ -6,7 +6,7 @@ import { BarChart } from './features/barChart/BarChart';
 function App() {
   return (
     <div className="App">
-      {/*<LineChart/>*/}
+      <LineChart/>
       <BarChart/>
     </div>
   );
