@@ -3,7 +3,7 @@ import { fetchBarCharData } from './barChartAPI';
 import { RootState } from '../../app/store';
 
 export interface BarChartState {
-  data: [{ name: string, count: number }] | [];
+  data: [{ name: string, count: number }];
   status: 'idle' | 'loading' | 'failed';
 }
 
@@ -28,7 +28,7 @@ export const barChartSlice = createSlice({
       state.data = action.payload;
     },
     clearData: (state) => {
-      state.data = [];
+      state.data = [{ name: 'N/A', count: 0 }];
     },
   },
   extraReducers: (builder) => {
