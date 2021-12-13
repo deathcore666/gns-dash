@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import styles from './barChart.module.css';
+import styles from './BarChart.module.css';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -47,8 +47,8 @@ export function BarChart() {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchBarChartDataAsync())
-  }, []);
-
+  }, [dispatch]);
+console.log('render')
   const datasets = rawData.map((dataUnit: { name: string; count: number; }) => ({
     label: dataUnit.name,
     data: [dataUnit.count],

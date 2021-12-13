@@ -42,7 +42,8 @@ const LineChart = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(fetchAsync());
-    }, []);
+    }, [dispatch]);
+    console.log('render')
 
     const labels: number[] = []
     rawData.L.map(o => labels.includes(o.date) ? null :  labels.push(o.date))
