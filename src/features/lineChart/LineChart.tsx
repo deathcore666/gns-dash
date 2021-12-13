@@ -12,9 +12,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import faker from 'faker';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
-import {selectCount} from "../counter/counterSlice";
 
 ChartJS.register(
     CategoryScale,
