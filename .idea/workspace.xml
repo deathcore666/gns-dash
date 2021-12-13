@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be8f6bf4-5d0c-48d5-a6af-f127b927b756" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/counterAPI.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/lineChart/LineChart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/lineChart/LineChart.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639309284408</updated>
-      <workItem from="1639309286021" duration="8856000" />
+      <workItem from="1639309286021" duration="9794000" />
     </task>
     <servers />
   </component>
