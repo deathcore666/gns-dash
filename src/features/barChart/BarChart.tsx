@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import styles from './barChart.module.css';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -73,5 +74,8 @@ export function BarChart() {
     //   },
     // ],
   };
-  return <Bar options={options} data={data} />;
+  return (
+      <div className={styles.BarChart}>
+        <Bar options={options} data={data} />
+      </div>);
 }
