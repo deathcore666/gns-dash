@@ -22,7 +22,6 @@ export const fetchBarChartDataAsync = createAsyncThunk(
 
 export const barChartSlice = createSlice({
   name: 'barChart',
-
   initialState,
   reducers: {
     setData: (state, action) => {
