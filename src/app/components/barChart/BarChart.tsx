@@ -11,7 +11,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import * as faker from 'faker';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { fetchBarChartDataAsync, selectBarChartData } from './barChartSlice';
 
 ChartJS.register(

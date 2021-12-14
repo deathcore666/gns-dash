@@ -12,7 +12,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import {useAppDispatch, useAppSelector} from "../../app/hooks";
+import {useAppDispatch, useAppSelector} from "../../store/hooks";
 
 ChartJS.register(
     CategoryScale,

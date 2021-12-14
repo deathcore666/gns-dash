@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../../app/store';
-import { fetchData } from './lineChartAPI';
+import { RootState } from '../../store/store';
+import { fetchLineChartData } from '../../api/lineChartAPI';
 
 export interface LineChartState {
   data: { P: [{ date: number, value: number }], L: [{ date: number, value: number }] };
@@ -20,7 +20,7 @@ const initialState: LineChartState = {
 export const fetchAsync = createAsyncThunk(
     'lineChart/fetchData',
     async () => {
-      const response = await fetchData();
+      const response = await fetchLineChartData();
       return response.data;
     }
 );

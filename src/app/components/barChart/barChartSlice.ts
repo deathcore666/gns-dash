@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchBarCharData } from './barChartAPI';
-import { RootState } from '../../app/store';
+import { fetchBarCharData } from '../../api/barChartAPI';
+import { RootState } from '../../store/store';
 
 export interface BarChartState {
   data: [{ name: string, count: number }];
