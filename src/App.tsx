@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import LineChart from "./features/lineChart/LineChart";
+import { Header } from './features/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <LineChart/>
+    <div>
+      <Header/>
     </div>
   );
 }
