@@ -12,7 +12,8 @@ import {
 import { Bar } from 'react-chartjs-2';
 import * as faker from 'faker';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { fetchBarChartDataAsync, selectBarChartData } from './barChartSlice';
+import { fetchBarChartDataAsync, selectBarChartData, selectBarChartStatus } from './barChartSlice';
+import { BarChartDataInterface } from "../../shared/interfaces/barChartDataInterface";
 
 ChartJS.register(
     CategoryScale,
@@ -37,45 +38,23 @@ export const options = {
     },
     title: {
       display: true,
-      text: 'GNS ',
+      text: 'GNS ', // todo set by using props
     },
   },
 };
 
 export function BarChart() {
-  const rawData = useAppSelector(selectBarChartData);
+  const barChartData: BarChartDataInterface = useAppSelector(selectBarChartData);
+  const barChartStatus: string = useAppSelector(selectBarChartStatus);
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(fetchBarChartDataAsync())
+    if (barChartStatus === 'idle') {
+      dispatch(fetchBarChartDataAsync())
+    }
   }, [dispatch]);
-console.log('render')
-  const datasets = rawData.map((dataUnit: { name: string; count: number; }) => ({
-    label: dataUnit.name,
-    data: [dataUnit.count],
-    borderColor: `rgb(${faker.datatype.number({min: 0, max: 255})}, ${faker.datatype.number({min: 0, max: 255})}, ${faker.datatype.number({min: 0, max: 255})})`,
-    backgroundColor: `rgb(${faker.datatype.number({min: 0, max: 255})}, ${faker.datatype.number({min: 0, max: 255})}, ${faker.datatype.number({min: 0, max: 255})})`,
-  }));
-  const labels: string[] = ['Lable']
-  const data = {
-    labels,
-    datasets
-    // datasets: [
-    //   {
-    //     label: 'Dataset 1',
-    //     data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-    //     borderColor: 'rgb(255, 99, 132)',
-    //     backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    //   },
-    //   {
-    //     label: 'Dataset 2',
-    //     data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-    //     borderColor: 'rgb(53, 162, 235)',
-    //     backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    //   },
-    // ],
-  };
+
   return (
       <div className={styles.BarChart}>
-        <Bar options={options} data={data} />
+        <Bar options={options} data={barChartData} />
       </div>);
 }

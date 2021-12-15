@@ -5,7 +5,7 @@ function Home() {
   return (
       <div>
         <LineChart/>
-        <BarChart/>
+        <BarChart />
       </div>
   );
 }

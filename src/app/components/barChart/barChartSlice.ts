@@ -1,22 +1,30 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchBarCharData } from '../../api/barChartAPI';
+import { fetchEDeclarationData } from '../../api/eDeclaration';
 import { RootState } from '../../store/store';
+import { BarChartDataInterface } from "../../shared/interfaces/barChartDataInterface";
 
 export interface BarChartState {
-  data: [{ name: string, count: number }];
+  data: BarChartDataInterface;
   status: 'idle' | 'loading' | 'failed';
 }
 
 const initialState: BarChartState = {
-  data: [{ name: 'N/A', count: 0 }],
+  data: {
+    labels: ['N/A'],
+    datasets: [{
+      label: 'N/A',
+      data: [1],
+      borderColor: 'rgb(0,0,0)',
+      backgroundColor: 'rgb(0,0,0)',
+    }]
+  },
   status: 'idle'
 }
-
+// generic function todo
 export const fetchBarChartDataAsync = createAsyncThunk(
     'barChart/fetchData',
-    async () => {
-      const response = await fetchBarCharData();
-      return response.data;
+    async (): Promise<BarChartDataInterface> => {
+      return await fetchEDeclarationData();
     }
 );
 
@@ -28,7 +36,15 @@ export const barChartSlice = createSlice({
       state.data = action.payload;
     },
     clearData: (state) => {
-      state.data = [{ name: 'N/A', count: 0 }];
+      state.data = {
+        labels: ['N/A'],
+        datasets: [{
+          label: 'N/A',
+          data: [1],
+          borderColor: 'rgb(0,0,0)',
+          backgroundColor: 'rgb(0,0,0)',
+        }]
+      };
     },
   },
   extraReducers: (builder) => {
@@ -48,4 +64,5 @@ export const barChartSlice = createSlice({
 
 export const { setData, clearData } = barChartSlice.actions;
 export const selectBarChartData = (state: RootState) => state.barChartData.data;
+export const selectBarChartStatus = (state: RootState) => state.barChartData.status;
 export default barChartSlice.reducer;
