@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import lineChartReducer from '../features/lineChart/lineChartSlice';
+import headerDataReducer from '../features/Header/Header'
 
 export const store = configureStore({
   reducer: {
     lineChartData: lineChartReducer,
+    headerData: headerDataReducer,
   },
 });
 
