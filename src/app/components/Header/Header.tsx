@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import React from 'react';
-import { useAppSelector } from '../../app/hooks';
-import { RootState } from '../../app/store';
+import { useAppSelector } from '../../store/hooks';
+import { RootState } from '../../store/store';
 import styles from './Header.module.css';
 
 
