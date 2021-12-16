@@ -1,4 +1,4 @@
-export function fetchData() {
+export function fetchLineChartData() {
   return new Promise<{ data: any }>((resolve) =>
       setTimeout(() => resolve(
           { data: {
