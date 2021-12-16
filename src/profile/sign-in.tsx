@@ -14,10 +14,10 @@ export const SignIn = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={6} md={3}>
+          <Grid item xs={12} md={3}>
             <SignInForm />
           </Grid>
-          <Grid item xs={6} md={6}>
+          <Grid item xs={12} md={6}>
                             <div className={styles.txtSpan}>
                 <div>
                   <span>ККМ:</span>20438
@@ -37,11 +37,12 @@ export const SignIn = () => {
           </Grid>
         </Grid>
       </div>
-      <footer className={styles.styleFooter}>
-        <img alt="table" src="/img/footer-tab.svg" />
+      <div className={styles.styleFooter}>
+        <img alt="table" src="/img/footer-tab.svg" className={styles.footer_tab}/>
 
-        <img alt="floor" src="/img/footer.svg" />
-      </footer>
+        <img alt="floor" src="/img/footer.svg" className={styles.footerPhoto}/>
+      </div>
+  
     </div>
   );
 };
