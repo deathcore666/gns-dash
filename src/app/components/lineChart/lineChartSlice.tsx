@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
-import { fetchData } from './lineChartAPI';
+import { RootState } from '../../store/store';
+import { fetchLineChartData } from '../../api/lineChartAPI';
 
 export interface LineChartState {
   data: { P: [{ date: number, value: number }], L: [{ date: number, value: number }] };
@@ -13,14 +13,14 @@ const initialState: LineChartState = {
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
-// can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
+// can be dispatched like a regular action: `dispatch(fetchAsync(10))`. This
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
 export const fetchAsync = createAsyncThunk(
     'lineChart/fetchData',
     async () => {
-      const response = await fetchData();
+      const response = await fetchLineChartData();
       return response.data;
     }
 );

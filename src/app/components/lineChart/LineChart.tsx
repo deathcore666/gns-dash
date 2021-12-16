@@ -12,7 +12,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import {useAppDispatch, useAppSelector} from "../../app/hooks";
+import {useAppDispatch, useAppSelector} from "../../store/hooks";
 
 ChartJS.register(
     CategoryScale,
@@ -32,7 +32,7 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'Chart.js Line Chart',
+            text: 'L P',
         },
     },
 };
@@ -40,10 +40,11 @@ export const options = {
 const LineChart = () => {
     const rawData = useAppSelector(selectLineChartData);
     const dispatch = useAppDispatch();
-    console.log(rawData)
     useEffect(() => {
         dispatch(fetchAsync());
-    });
+    }, [dispatch]);
+    console.log('render')
+
     const labels: number[] = []
     rawData.L.map(o => labels.includes(o.date) ? null :  labels.push(o.date))
     rawData.P.map(o => labels.includes(o.date) ? null :  labels.push(o.date))

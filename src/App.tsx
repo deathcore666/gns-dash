@@ -1,12 +1,17 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import './App.css';
-import LineChart from "./features/lineChart/LineChart";
-import { SignIn } from './profile/sign-in';
+import Home from "./app/pages/home/Home";
+import { Routes, Route } from "react-router-dom";
+import Itas from "./app/pages/itas/Itas";
 
 function App() {
   return (
-    <div >
-      <SignIn/>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/itas" element={<Itas />} />
+      </Routes>
     </div>
   );
 }
