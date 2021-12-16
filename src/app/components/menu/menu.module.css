@@ -1,0 +1,43 @@
+
+.boxMenu{
+    width: 260px;
+    height: 239px;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.01);
+    margin: 20px;
+}
+.boxTxt {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 20px;
+    color: #1F4173;
+}
+
+.boxStyle {
+    padding: 20px;
+    text-align: start;
+}
+.txtLorem {
+    color: #767676;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.styleButton {
+    padding: 3px 20px;
+    background: #F5F7FB;
+    border: 1px solid #F2F2F2;
+    color: #3BA6B3;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.styleButton:hover {
+    background: #E5E5E5;
+}
+
+.line {
+    border: 1px solid #EEEEEE;
+    margin: 18px 0px 18px 0px;
+}
