@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
-import LineChart from "./features/lineChart/LineChart";
+import Home from "./app/pages/home/Home";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <LineChart/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
