@@ -1,10 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import headerDataReducer from '../components/Header/Header'
 import lineChartReducer from '../components/lineChart/lineChartSlice';
 import barChartReducer from '../components/barChart/barChartSlice';
 
 export const store = configureStore({
   reducer: {
     lineChartData: lineChartReducer,
+    headerData: headerDataReducer,
     barChartData: barChartReducer,
   },
 });
