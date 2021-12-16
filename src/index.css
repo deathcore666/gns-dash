@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Proxima, sans-serif;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  margin: 0 !important;
+}
+@font-face {
+  font-family: 'Proxima';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/proxima/ProximaNova-Regular.eot'); /* IE9 Compat Modes */
+  src: local('Proxima'), local('Proxima'),
+  url('assets/fonts/proxima/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('assets/fonts/proxima/ProximaNova-Regular.woff') format('woff'), /* Modern Browsers */
+  url('assets/fonts/proxima/ProximaNova-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+body {
 }

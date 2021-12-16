@@ -1,0 +1,89 @@
+.dataCard {
+    width: 255px;
+    height: 271px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+
+    .topSection {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #F6F7FB;
+        padding-bottom: 15px;
+        text-align: left;
+        .cardTitle{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #333333;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+    }
+    .middleSection {
+        height: 110px;
+        border-bottom: 1px solid #F6F7FB;
+        text-align: left;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .fact {
+            color: #828282;
+            text-align: left;
+        }
+        .factVal {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 100%;
+            color: #333333;
+        }
+        .percentageArea {
+            padding-top: 10px;
+            .percentage {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 12px;
+                color: #27AE60;
+                display: flex;
+                flex-direction: row;
+            }
+
+            p {
+                margin-left: 5px !important;
+                color: #828282 !important;
+            }
+        }
+    }
+    .bottomSection {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        .progressBar{
+            width: 215px;
+            height: 12px;
+            background: #F2F2F2;
+        }
+
+        .forecastVal {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #828282;
+            display: flex;
+            flex-direction: row;
+            p {
+                margin-left: 5px !important;
+            }
+        }
+    }
+}
+p {
+}
