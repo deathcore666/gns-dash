@@ -4,8 +4,6 @@ import {BarChart} from "../../components/barChart/BarChart";
 function Home() {
   return (
       <div>
-        <LineChart/>
-        <BarChart />
       </div>
   );
 }
