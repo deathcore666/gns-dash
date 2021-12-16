@@ -15,6 +15,12 @@ function MainMenu() {
           <Menu title="Кабинет НП" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
           <Menu title="ACB" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
           <Menu title="ЭСФ" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
+          <Menu title="ЭСФ" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
+          <Menu title="ЭСФ" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
+          <Menu title="ЭСФ" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
+          <Menu title="ЭСФ" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
+          <Menu title="ЭСФ" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
+          <Menu title="ЭСФ" value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO" url="https://salyk.kg/"/>
  
         </Grid>
       </Container>
