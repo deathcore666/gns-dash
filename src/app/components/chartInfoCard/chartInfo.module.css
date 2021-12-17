@@ -1,0 +1,38 @@
+.cardBox{
+    width: 387px;
+    height: 392px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 90px rgba(163, 171, 185, 0.24);
+border-radius: 10px;
+
+}
+.cardStyle {
+    padding: 20px;
+    text-align: start;
+}
+
+.boxTxt {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    margin: 18px 0px 18px 0px;
+}
+
+.txtLorem {
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+}
+.txtSum {
+    font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 34px;
+color: #333333;
+}
+.line {
+    border: 1px solid #EEEEEE;
+    margin: 18px 0px 18px 0px;
+}

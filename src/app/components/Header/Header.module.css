@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    color: #3BA6B3;
+  }
+  .txtStyle  {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    font-style: normal;
+    color: black;
+    padding: 15px;
+}
+  .txtStyle span {
+      color:#3BA6B3;
+  }
+
+  .vl {
+      border-left: 2px solid #D7D8DA;
+      height: 35px;
+      margin: 0px 25px 0px 25px;
+  }
