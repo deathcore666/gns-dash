@@ -1,6 +1,7 @@
 import styles from './Itas.module.scss';
 import DataCard from '../../components/dataCard/DataCard';
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
+import BarChart from '../../components/barChart/BarChart';
 
 const props = Array.from(Array(4).keys()).map(i => ({ number: i }));
 
@@ -11,6 +12,14 @@ function Itas() {
           <div className={ styles.dataCardsContainer }>
             { props.map((i) => <DataCard { ...i } key={ i.number }/>) }
           </div>
+          <Box
+            sx={{
+              bgcolor: 'white',
+              height: '630px',
+              marginTop: '30px'
+            }}>
+            <BarChart/>
+          </Box>
         </Container>
       </div>
   );

@@ -13,6 +13,8 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
+import axios, { AxiosResponse } from 'axios';
+import { IncomeInfoAggregateInterface } from '../../shared/interfaces/incomeInfoAggregateInterface';
 
 ChartJS.register(
     CategoryScale,
@@ -32,7 +34,7 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'L P',
+            text: '',
         },
     },
 };
