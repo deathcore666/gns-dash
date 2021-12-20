@@ -6,13 +6,17 @@ type Props = {
 title: string;
 value: string;
 url: string;
+img: string;
 }
 
-export const Menu = ({title, url, value}: Props) => {
+export const Menu = ({title, url, value, img}: Props) => {
   return (
     <div className={styles.boxMenu}>
       <div className={styles.boxStyle}>
-        <img src="/img/image-test.svg" alt="logo" />
+        <div className={styles.photo}>
+        <img src={img} alt="logo" />
+        </div>
+       
         <div className={styles.boxTxt}>
           <p>{title}</p>
         </div>
