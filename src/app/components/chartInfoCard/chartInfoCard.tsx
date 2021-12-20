@@ -1,7 +1,7 @@
 
 import React from "react";
 import styles from './chartInfo.module.css';
-import budgetLogo from '../../../assets/img/logos/budget-card-logo.svg'
+import budgetLogo from '../../../assets/img/logos/budget-card-logo-0.svg'
 
 type Props = {
 title: string;
@@ -16,7 +16,7 @@ export const ChartInfoCard = (props: Props) => {
           <div>
           <img alt={'budget-logo'} src={budgetLogo} width={80} height={80}/>
           </div>
-      
+
         <div className={styles.boxTxt}>
           <p>{props.title}</p>
         </div>

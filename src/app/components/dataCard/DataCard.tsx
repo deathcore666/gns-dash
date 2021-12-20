@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styles from './DataCard.module.scss';
 
-import budgetLogo from '../../../assets/img/logos/budget-card-logo.svg'
+import budgetLogoOne from '../../../assets/img/logos/budget-card-logo-0.svg'
+import budgetLogoTwo from '../../../assets/img/logos/budget-card-logo-1.svg'
+import budgetLogoThree from '../../../assets/img/logos/budget-card-logo-2.svg'
+import budgetLogoFour from '../../../assets/img/logos/budget-card-logo-3.svg'
 import { IncomeInfoAggregateInterface } from '../../shared/interfaces/incomeInfoAggregateInterface';
 import axios, { AxiosResponse } from 'axios';
 
@@ -11,6 +14,7 @@ const initialState = {
   forecastVal: 0,
   fulfillmentPercentage: 0
 };
+const logos = [budgetLogoOne, budgetLogoTwo, budgetLogoThree, budgetLogoFour];
 
 const fetchDataHttp = async (i: number): Promise<AxiosResponse<IncomeInfoAggregateInterface>> => {
   debugger
@@ -33,7 +37,7 @@ const DataCard = (props: { number: number }) => {
   }, [data.factVal]);
   return  <div className={styles.dataCard}>
     <div className={styles.topSection}>
-      <img alt={'budget-logo'} src={budgetLogo}/>
+      <img alt={'budget-logo'} src={logos[props.number]}/>
       <div className={styles.cardTitle}>
         <p>{data.budgetType}</p>
       </div>

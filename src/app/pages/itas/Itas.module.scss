@@ -2,5 +2,8 @@
     .dataCardsContainer {
         display: flex;
         flex-direction: row;
+        >:nth-child(n) {
+            margin-right: 30px;
+        }
     }
 }
