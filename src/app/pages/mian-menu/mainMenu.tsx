@@ -12,7 +12,7 @@ import mtLogo from '../../../assets/img/logos/MT.svg'
 function MainMenu() {
   return (
     <Container maxWidth="lg">
-      <Grid container direction="row">
+      <Grid container  >
         <Menu
           title="Иснак"
           value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
