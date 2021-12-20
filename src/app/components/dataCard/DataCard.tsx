@@ -1,25 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './DataCard.module.scss';
 
 import budgetLogo from '../../../assets/img/logos/budget-card-logo.svg'
 import { IncomeInfoAggregateInterface } from '../../shared/interfaces/incomeInfoAggregateInterface';
+import axios, { AxiosResponse } from 'axios';
 
-const DataCard = (props: IncomeInfoAggregateInterface) => (
-  <div className={styles.dataCard}>
+const initialState = {
+  budgetType: 'N/A',
+  factVal: 0,
+  forecastVal: 0,
+  fulfillmentPercentage: 0
+};
+
+const fetchDataHttp = async (i: number): Promise<AxiosResponse<IncomeInfoAggregateInterface>> => {
+  debugger
+  return await axios.get(
+      `http://10.111.15.123:5010/api/ITAS/IncomeInfoAggregate?budgetType=${ i + 1 }`,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      });
+}
+
+const DataCard = (props: { number: number }) => {
+  const [data, setData] = useState(initialState);
+  useEffect(() => {
+    (async () => {
+      const res = await fetchDataHttp(props.number);
+      setData(res.data);
+    })();
+  }, [data.factVal]);
+  return  <div className={styles.dataCard}>
     <div className={styles.topSection}>
       <img alt={'budget-logo'} src={budgetLogo}/>
       <div className={styles.cardTitle}>
-        <p>{props.budgetType}</p>
+        <p>{data.budgetType}</p>
       </div>
     </div>
     <div className={styles.middleSection}>
       <div className={styles.fact}>Факт</div>
       <div className={styles.factVal}>
-        {props.factVal} сом
+        {data.factVal} сом
       </div>
       <div className={styles.percentageArea}>
         <div className={styles.percentage}>
-          {props.fulfillmentPercentage} <p>за последний месяц</p>
+          {data.fulfillmentPercentage} <p>за последний месяц</p>
         </div>
       </div>
     </div>
@@ -27,11 +53,11 @@ const DataCard = (props: IncomeInfoAggregateInterface) => (
       <div className={styles.progressBar}>
       </div>
       <div className={styles.forecastVal}>
-        Прогноз: <p>{props.forecastVal}</p>
+        Прогноз: <p>{data.forecastVal}</p>
       </div>
     </div>
 
-  </div>
-);
+  </div>;
+};
 
 export default DataCard;
