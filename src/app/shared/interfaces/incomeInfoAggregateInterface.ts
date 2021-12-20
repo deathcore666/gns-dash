@@ -1,4 +1,4 @@
-export interface DataCardInterface {
+export interface IncomeInfoAggregateInterface {
   budgetType: string;
   factVal: number;
   forecastVal: number;

@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './DataCard.module.scss';
 
 import budgetLogo from '../../../assets/img/logos/budget-card-logo.svg'
-import { DataCardInterface } from '../../shared/interfaces/dataCardInterface';
+import { IncomeInfoAggregateInterface } from '../../shared/interfaces/incomeInfoAggregateInterface';
 
-const DataCard = (props: DataCardInterface) => (
+const DataCard = (props: IncomeInfoAggregateInterface) => (
   <div className={styles.dataCard}>
     <div className={styles.topSection}>
       <img alt={'budget-logo'} src={budgetLogo}/>
