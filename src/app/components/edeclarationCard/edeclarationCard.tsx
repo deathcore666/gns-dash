@@ -8,13 +8,13 @@ type Props = {
     img: string;
 }
 
-export const EdeclarationCard = ({title, count, color, img}: Props) => {
-return(
-    <div className={styles.cardBox } style={{background: `${color}`}}>
+export const EdeclarationCard = ({ title, count, color, img }: Props) => {
+  return (
+    <div className={styles.cardBox} style={{ background: `${color}` }}>
       <div className={styles.cardStyle}>
-          <div>
-          <img alt={'budget-logo'} src={img}/>
-          </div>
+        <div>
+          <img alt={"budget-logo"} src={img} />
+        </div>
 
         <div className={styles.boxTxt}>
           <p>{title}</p>
@@ -28,5 +28,5 @@ return(
         </div>
       </div>
     </div>
-)
-}
+  );
+};
