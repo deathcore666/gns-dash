@@ -1,7 +1,7 @@
 
 import { Container, Grid } from "@mui/material";
 import { ChartCard } from "../../components/chartCard/chartCard";
-import { ChartInfoCard } from "../../components/chartInfoCard/chartInfoCard";
+import { ChartInfoPunchedCard } from "../../components/chartInfoCard/chartInfoPunchedCard";
 import styles from '../../components/chartCard/chartCard.module.css'
 
 function CardInfoEsf() {
@@ -20,14 +20,14 @@ function CardInfoEsf() {
         </Grid>
         
         <Grid item xs={6}>
-          <ChartInfoCard
+          <ChartInfoPunchedCard
             count="5964шт"
             title="Количество выписанных ЭСФ с суммой за 2021 год"
             sum="158384907730.69сом"
           />
         </Grid>
         <Grid item xs={6}>
-          <ChartCard title="Кол-во зарегистрированных НП в ЭСФ по месяцам за 2021год" />
+          <ChartCard  title="Кол-во зарегистрированных НП в ЭСФ по месяцам за 2021год" />
         </Grid>
       </Grid>
        
