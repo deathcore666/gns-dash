@@ -2,6 +2,8 @@
 import React from "react";
 import styles from './chartInfo.module.css';
 import budgetLogo from '../../../assets/img/logos/budget-card-logo.svg'
+import { Card } from "tabler-react";
+import { CardContent, Typography } from "@mui/material";
 
 type Props = {
 title: string;
@@ -11,30 +13,29 @@ sum: string;
 
 export const ChartInfoCard = (props: Props) => {
   return (
-    <div className={styles.cardBox}>
-      <div className={styles.cardStyle}>
-          <div>
-          <img alt={'budget-logo'} src={budgetLogo} width={80} height={80}/>
-          </div>
-      
-        <div className={styles.boxTxt}>
-          <p>{props.title}</p>
-        </div>
+    <Card sx={{ maxWidth: 300 }} elevation={6} className={styles.cardStyle}>
+      <CardContent>
+        <Typography>
+          <img alt={"budget-logo"} src={budgetLogo} />
+        </Typography>
+        <Typography variant="h6" component="div">
+          {props.title}
+        </Typography>
         <div className={styles.line}></div>
-        <div className={styles.txtLorem}>
-          <p>Выдано:</p>
-        </div>
-        <div className={styles.txtSum}>
-          <p>{props.count}</p>
-        </div>
+        <Typography variant="body2" color="text.secondary">
+          Выдано:
+        </Typography>
+        <Typography variant="h6" component="div">
+          {props.count}
+        </Typography>
         <div className={styles.line}></div>
-        <div className={styles.txtLorem}>
-          <p>На сумму:</p>
-        </div>
-        <div className={styles.txtSum}>
-          <p>{props.sum}</p>
-        </div>
-      </div>
-    </div>
+        <Typography variant="body2" color="text.secondary">
+          На сумму:
+        </Typography>
+        <Typography variant="h6" component="div">
+          {props.sum}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 };
