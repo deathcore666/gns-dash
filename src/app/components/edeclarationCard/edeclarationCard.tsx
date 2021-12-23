@@ -2,8 +2,8 @@ import React from "react";
 import styles from '../edeclarationCard/edeclarationCard.module.css'
 
 type Props = {
-    title: string;
-    count: string;
+    title: string | undefined;
+    count: string | undefined;
     color: string;
     img: string;
 }
