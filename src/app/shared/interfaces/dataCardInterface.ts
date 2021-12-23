@@ -11,8 +11,9 @@ export interface GetInvoiceCountWithSumEsf {
 } 
 
 export interface GetESFRegistrationByMonth {
+ 
   count: number;
-  date: Date;
+  date: string;
 } 
 
 export interface RegistrationByMonth {
@@ -25,7 +26,7 @@ export interface TopTenForLastMonthEsf {
  
   invoiceNum: number;
   totalAmount: number;
-  invoiceDate: Date;
+  invoiceDate: string;
 }
 
 export interface TopTenInfo {

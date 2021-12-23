@@ -35,7 +35,6 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'L P',
         },
     },
 };
@@ -55,8 +54,9 @@ const LineChartEsf = ({url}: Props) => {
 
 
 
-    const labels: Date[] = []
-    lineChart?.map(o => labels.includes(o.date) ? null :  labels.push(o.date))
+    const labels: string[] = []
+    lineChart?.map(o => labels.includes(o.date) ? null :  labels.push(o.date.slice(0,7)))
+    
     const data = {
         labels: labels,
         datasets: [

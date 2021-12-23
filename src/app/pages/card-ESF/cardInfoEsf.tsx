@@ -1,4 +1,4 @@
-import { Container, Grid, TableCell, TableRow } from "@mui/material";
+import { Chip, Container, Grid, TableCell, TableRow } from "@mui/material";
 import { ChartCard } from "../../components/chartCard/chartCard";
 import { ChartInfoCard } from "../../components/chartInfoCard/chartInfoCard";
 import styles from "../../components/chartCard/chartCard.module.css";
@@ -48,8 +48,8 @@ function CardInfoEsf() {
       <TableCell component="th" scope="row">
         {row.invoiceNum}
       </TableCell>
-      <TableCell align="right">{row.totalAmount}</TableCell>
-      <TableCell align="right">{row.invoiceDate}</TableCell>
+      <TableCell align="right"> <Chip label={`${row.totalAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} сом`} color='success'  /></TableCell>
+      <TableCell align="right">{row.invoiceDate.slice(0,10)}</TableCell>
     </TableRow>
   ));
 
@@ -58,8 +58,8 @@ function CardInfoEsf() {
       <TableCell component="th" scope="row">
         {row.invoiceNum}
       </TableCell>
-      <TableCell align="right">{row.totalAmount}</TableCell>
-      <TableCell align="right">{row.invoiceDate}</TableCell>
+      <TableCell align="right"><Chip label={`${row.totalAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} сом`} color='success'  /></TableCell>
+      <TableCell align="right">{row.invoiceDate.slice(0,10)}</TableCell>
     </TableRow>
   ));
 

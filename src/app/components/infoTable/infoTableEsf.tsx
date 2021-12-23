@@ -23,23 +23,34 @@ export const InfoTableEsf = ({...props}: Props) => {
       className={styles.styleTable}
     >
       <Typography variant="h4" component="div">
-      Топ-10
+        Топ-10
       </Typography>
       <Typography variant="h6" component="div">
-      {props.title}
+        {props.title}
       </Typography>
       <hr />
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Номер ЭСФ</TableCell>
-            <TableCell align="right">Сумма</TableCell>
-            <TableCell align="right">Дата выписки</TableCell>
+            <TableCell>
+              {" "}
+              <Typography variant="h6" component="div">
+                Номер ЭСФ
+              </Typography>
+            </TableCell>
+            <TableCell align="right">
+              <Typography variant="h6" component="div">
+                Сумма
+              </Typography>
+            </TableCell>
+            <TableCell align="right">
+              <Typography variant="h6" component="div">
+                Дата выписки
+              </Typography>
+            </TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          {props.row}
-        </TableBody>
+        <TableBody>{props.row}</TableBody>
       </Table>
     </TableContainer>
   );
