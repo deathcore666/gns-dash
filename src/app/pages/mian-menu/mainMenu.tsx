@@ -12,8 +12,8 @@ import mtLogo from '../../../assets/img/logos/MT.svg'
 function MainMenu() {
   return (
     <Container maxWidth="lg">
-      <Grid container direction="row">
-        <Grid item xs={3}>
+      <Grid container direction="row" rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12} sm={6} md={4} lg={3} >
           <Menu
             title="Иснак"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
@@ -21,7 +21,7 @@ function MainMenu() {
             url="https://salyk.kg/"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3} >
           <Menu
             title="Кабинет НП"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
@@ -29,7 +29,7 @@ function MainMenu() {
             url="https://salyk.kg/"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="ACB"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
@@ -37,15 +37,15 @@ function MainMenu() {
             url="https://salyk.kg/"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="ЭСФ"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
             img={esfLogo}
-            url="https://salyk.kg/"
+            url="/ESF"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="Е-патент"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
@@ -53,7 +53,7 @@ function MainMenu() {
             url="https://salyk.kg/"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="Свободный пост"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
@@ -61,15 +61,15 @@ function MainMenu() {
             url="https://salyk.kg/"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="ККМ"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
             img={kkmLogo}
-            url="https://salyk.kg/"
+            url="/KKM"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="ЭТТН"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
@@ -77,7 +77,7 @@ function MainMenu() {
             url="https://salyk.kg/"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="Дислокация"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
@@ -85,7 +85,7 @@ function MainMenu() {
             url="https://salyk.kg/"
           />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Menu
             title="ГАИС МТ"
             value="Lorem ipsum dolor sit amet consectetur adipisicing elit HELLO"
