@@ -1,31 +1,36 @@
-
+import { CardContent, Paper, Typography } from "@mui/material";
 import React from "react";
-import styles from './menu.module.css';
+import { Link } from "react-router-dom";
+import { Card } from "tabler-react";
+import styles from "./menu.module.css";
 
 type Props = {
-title: string;
-value: string;
-url: string;
-img: string;
-}
+  title: string;
+  value: string;
+  url: string;
+  img: string;
+};
 
-export const Menu = ({title, url, value, img}: Props) => {
+export const Menu = ({ title, url, value, img }: Props) => {
   return (
-    <div className={styles.boxMenu}>
-      <div className={styles.boxStyle}>
-        <div className={styles.photo}>
-        <img src={img} alt="logo" />
-        </div>
-       
-        <div className={styles.boxTxt}>
-          <p>{title}</p>
-        </div>
-        <div className={styles.txtLorem}>
-          <p>{value}</p>
-        </div>
+    <Paper elevation={1} >
+    <Card  className={styles.boxStyle}>
+      <CardContent>
+        <Typography>
+          <img src={img} alt="logo" />
+        </Typography>
+        <Typography variant="h6" component="div" className={styles.boxTxt}>
+          {title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {value}
+        </Typography>
         <div className={styles.line}></div>
-        <a className={styles.styleButton} href={url}>Подробнее</a>
-      </div>
-    </div>
+        <Link to={url} className={styles.styleButton}>
+          Подробнее
+        </Link>
+      </CardContent>
+    </Card>
+    </Paper>
   );
 };

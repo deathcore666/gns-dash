@@ -1,18 +1,38 @@
 import React, { useState } from "react";
-import styles from './sign.module.css';
+import styles from "./sign.module.css";
 import { Button, Stack, TextField } from "@mui/material";
-
+import { useAppDispatch } from "../../store/hooks";
+import { useNavigate } from "react-router-dom";
+import { setUser } from "./userSlice";
+import axios from "axios";
 
 export const SignInForm = () => {
+  const dispatch = useAppDispatch();
+  const push = useNavigate();
   const [formData, setFormData] = useState({ login: "", password: "" });
+
+
 
   const change = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const onFormSubmit = (e: any) => {
+  const onFormSubmit = async (e: any) => {
     e.preventDefault();
-    console.log("data", formData);
+    await axios
+      .post(
+        `http://10.111.15.123:5085/api/Auth?login=${formData.login}&password=${formData.password}`,
+        formData
+      )
+      .then((data) => {
+        dispatch(
+          setUser({
+            data: data.config.data,
+          })
+        );
+
+        push("/home");
+      })
+      .catch(() => alert("Неверный логин или пароль"));
   };
 
   return (
