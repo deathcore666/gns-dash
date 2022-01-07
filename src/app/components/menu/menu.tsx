@@ -1,4 +1,4 @@
-import { CardContent, Typography } from "@mui/material";
+import { CardContent, Paper, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "tabler-react";
@@ -13,7 +13,8 @@ type Props = {
 
 export const Menu = ({ title, url, value, img }: Props) => {
   return (
-    <Card sx={{ maxWidth: 345 }} elevation={3} className={styles.boxStyle}>
+    <Paper elevation={1} >
+    <Card  className={styles.boxStyle}>
       <CardContent>
         <Typography>
           <img src={img} alt="logo" />
@@ -30,5 +31,6 @@ export const Menu = ({ title, url, value, img }: Props) => {
         </Link>
       </CardContent>
     </Card>
+    </Paper>
   );
 };

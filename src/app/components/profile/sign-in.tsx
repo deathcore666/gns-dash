@@ -1,22 +1,34 @@
 import React from "react";
 import { SignInForm } from "./sign-in-form";
 import styles from "./sign.module.css";
-import { Box, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
+import { Layout } from "../Layout/Layout";
 
 export const SignIn = () => {
   return (
-    <Box  sx={{ flexGrow: 9 }}>
-        <Grid
-          container
-        >
-          <Grid item className={styles.borderR} xs sm={6} lg={12} md={10}>
-            <Grid item xs lg={3} md={2} sm={3} xl={2}>
+    <Layout>
+      <Box
+        sx={{
+          flexGrow: 6,
+          p: 4,
+          borderRadius: "65px",
+          border: "4px solid #36353D",
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid
+            container
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Grid item xs lg={4} md={4} sm={3} xl={2}>
               <SignInForm />
             </Grid>
             <Grid
               item
               xs
-              md={9}
+              md={8}
               lg={8}
               xl={8}
               sx={{ display: { xs: "none", sm: "none", md: "block" } }}
@@ -36,30 +48,28 @@ export const SignIn = () => {
                   <span>Проверка субьектов:</span>20438
                 </div>
               </div>
-              <img alt="kg" src="/img/kg.svg" width={1000} height={465} />
+              <img alt="kg" src="/img/kg.svg" width={900} height={465} />
             </Grid>
           </Grid>
-          <Grid
-            item
-            xs
-            lg={12}
-            md={12}
-            sx={{ display: { xs: "none", sm: "none", md: "block" } }}
-            className={styles.styleFooter}
-          >
-            <img
-              alt="table"
-              src="/img/footer-tab.svg"
-              className={styles.footer_tab}
-            />
+        </Container>
+      </Box>
 
-            <img
-              alt="floor"
-              src="/img/footer.svg"
-              className={styles.footerPhoto}
-            />
-          </Grid>
-        </Grid>
-        </Box>
+      <Grid
+        item
+        xs
+        lg={12}
+        md={12}
+        sx={{ display: { xs: "none", sm: "none", md: "block" } }}
+        className={styles.styleFooter}
+      >
+        <img
+          alt="table"
+          src="/img/footer-tab.svg"
+          className={styles.footer_tab}
+        />
+
+        <img alt="floor" src="/img/footer.svg" className={styles.footerPhoto} />
+      </Grid>
+    </Layout>
   );
 };

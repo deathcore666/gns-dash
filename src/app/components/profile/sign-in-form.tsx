@@ -11,10 +11,11 @@ export const SignInForm = () => {
   const push = useNavigate();
   const [formData, setFormData] = useState({ login: "", password: "" });
 
+
+
   const change = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const onFormSubmit = async (e: any) => {
     e.preventDefault();
     await axios
@@ -23,14 +24,12 @@ export const SignInForm = () => {
         formData
       )
       .then((data) => {
-        console.log(data);
         dispatch(
           setUser({
-            data: data,
-            login: data.data,
-
+            data: data.config.data,
           })
         );
+
         push("/home");
       })
       .catch(() => alert("Неверный логин или пароль"));
